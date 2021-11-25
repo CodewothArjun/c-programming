@@ -2,7 +2,7 @@
 int main()
 {
     int i, n, lar,sm, elem;
-    printf ("Enter total number of elements : ");
+    printf ("Enter total number of elements : "); //displaying to ask the total no. of elements to enter 
     scanf ("%d", &elem);
     printf ("Enter first number : ");
     scanf ("%d", &n);
