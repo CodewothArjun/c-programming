@@ -25,23 +25,50 @@
 // }
 
 // Program to read the age of 40 students and count the number of students age between 15 to 22.
+// #include <stdio.h>
+// int main()
+// {
+//     int age[40];
+//     int i, count = 0;
+//     for (i = 0; i < 40; i++)
+//     {
+//         printf("Enter person %d age=", i + 1);
+//         scanf("%d", &age[i]);
+//     }
+//     for (i = 0; i < 40; i++)
+//     {
+//         if (age[i] > 15 && age[i] < 22)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("count=%d", count);
+//     return 0;
+// }
+
+// Program to input several numbers and arrange them in ascending order
 #include <stdio.h>
 int main()
 {
-    int age[40];
-    int i, count = 0;
-    for (i = 0; i < 40; i++)
+    int num[50];
+    int temp, i, n, j;
+    printf("How many numbers ? ");
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
     {
-        printf("Enter person %d age=", i + 1);
-        scanf("%d", &age[i]);
-    }
-    for (i = 0; i < 40; i++)
-    {
-        if (age[i] > 15 && age[i] < 22)
+        for (j = 0; j < n; j++)
         {
-            count++;
+            if (num[j] > num[j + 1])
+            {
+                temp = num[j];
+                num[j] = num[j + 1];
+                num[j + i] = temp;
+            }
         }
     }
-    printf("count=%d", count);
+    for (i = 0; i < n; i++)
+    {
+        printf("%d", num[i]);
+    }
     return 0;
 }
