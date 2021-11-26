@@ -72,3 +72,29 @@ int main()
     }
     return 0;
 }
+
+
+
+
+
+
+
+
+
+sum of n number#include<stdio.h>
+
+int main()
+{
+    int N,sum=0,i,inp;
+    printf("enter how many number do you want to sum :");
+    scanf("%d",&N);
+    for(i=0; i<N; i++) {
+        printf("\n enter %d th number ",i);
+        scanf("%d",&inp);
+        sum+=inp;
+
+    }
+
+    printf("\n sum=%d",sum);
+    return 0;
+}
