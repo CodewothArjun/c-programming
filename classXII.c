@@ -80,6 +80,7 @@
 #include <string.h>
 struct student
 {
+<<<<<<< HEAD
     char name[20];
     int id;
     int class;
@@ -105,3 +106,53 @@ void main()
     printf("%s", std1.age);
     getch();
 }
+=======
+    int num[50];
+    int temp, i, n, j;
+    printf("How many numbers ? ");
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            if (num[j] > num[j + 1])
+            {
+                temp = num[j];
+                num[j] = num[j + 1];
+                num[j + i] = temp;
+            }
+        }
+    }
+    for (i = 0; i < n; i++)
+    {
+        printf("%d", num[i]);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+sum of n number#include<stdio.h>
+
+int main()
+{
+    int N,sum=0,i,inp;
+    printf("enter how many number do you want to sum :");
+    scanf("%d",&N);
+    for(i=0; i<N; i++) {
+        printf("\n enter %d th number ",i);
+        scanf("%d",&inp);
+        sum+=inp;
+
+    }
+
+    printf("\n sum=%d",sum);
+    return 0;
+}
+>>>>>>> 3e0c871251f6efed6327c92214305060b1a4bb36
