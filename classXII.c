@@ -73,33 +73,58 @@
 //     return 0;
 // }
 
-#include <conio.h>
+// #include <conio.h>
+// #include <stdio.h>
+// #include <string.h>
+// struct student
+// {
+//     char name[20];
+//     int id;
+//     int class;
+//     int age;
+// };
+// void main()
+// {
+//     // calling the structure
+//     struct student std1;
+//     // taking an input from user
+//     printf("Enter your name: ");
+//     scanf("%s", &std1.name);
+//     printf("Enter your id: ");
+//     scanf("%s", &std1.id);
+//     printf("Enter your class: ");
+//     scanf("%s", &std1.class);
+//     printf("Enter your age ");
+//     scanf("%s", &std1.age);
+//     // printing the data
+//     printf("%s", std1.name);
+//     printf("%s", std1.id);
+//     printf("%s", std1.class);
+//     printf("%s", std1.age);
+//     getch();
+// }
+
+
+
+// A c program to assign values to the member of structure and to display them on the screen
 #include <stdio.h>
+// #include <conio.h>
 #include <string.h>
 struct student
 {
-    char name[20];
-    int id;
-    int class;
-    int age;
+    char name[10];
+    unsigned int roll_no;
+    float mark;
 };
-void main()
+int main()
 {
-    // calling the structure
-    struct student std1;
-    // taking an input from user
-    printf("Enter your name: ");
-    scanf("%s", &std1.name);
-    printf("Enter your id: ");
-    scanf("%s", &std1.id);
-    printf("Enter your class: ");
-    scanf("%s", &std1.class);
-    printf("Enter your age ");
-    scanf("%s", &std1.age);
-    // printing the data
-    printf("%s", std1.name);
-    printf("%s", std1.id);
-    printf("%s", std1.class);
-    printf("%s", std1.age);
-    getch();
+    struct student stu1;
+    clrscr();
+    strcpy(stu1.name, "Arjun");
+    stu1.roll_no = 1;
+    stu1.mark = 98;
+    printf("\n The name of student is %s ", stu1.name);
+    printf("\n The roll_no %u", stu1.roll_no);
+    printf("\n The mark obtained id %f", stu1.mark);
+    return 0;
 }
