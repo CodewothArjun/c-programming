@@ -105,3 +105,8 @@ void main()
     printf("%s", std1.age);
     getch();
 }
+
+
+
+
+hle
