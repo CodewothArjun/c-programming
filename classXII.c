@@ -75,7 +75,33 @@
 
 
 
-#include<stdio.h>
-int main(){
-    printf("Hello World ");
-    }
+#include <conio.h>
+#include <stdio.h>
+#include <string.h>
+struct student
+{
+    char name[20];
+    int id;
+    int class;
+    int age;
+};
+void main()
+{
+    // calling the structure
+    struct student std1;
+    // taking an input from user
+    printf("Enter your name: ");
+    scanf("%s", &std1.name);
+    printf("Enter your id: ");
+    scanf("%s", &std1.id);
+    printf("Enter your class: ");
+    scanf("%s", &std1.class);
+    printf("Enter your age ");
+    scanf("%s", &std1.age);
+    // printing the data
+    printf("%s", std1.name);
+    printf("%s", std1.id);
+    printf("%s", std1.class);
+    printf("%s", std1.age);
+    getch();
+}
