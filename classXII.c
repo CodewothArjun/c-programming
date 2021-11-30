@@ -47,28 +47,35 @@
 // }
 
 // Program to input several numbers and arrange them in ascending order
-#include <stdio.h>
-int main()
-{
-    int num[50];
-    int temp, i, n, j;
-    printf("How many numbers ? ");
-    scanf("%d", &n);
-    for (i = 0; i < n; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            if (num[j] > num[j + 1])
-            {
-                temp = num[j];
-                num[j] = num[j + 1];
-                num[j + i] = temp;
-            }
-        }
+// #include <stdio.h>
+// int main()
+// {
+//     int num[50];
+//     int temp, i, n, j;
+//     printf("How many numbers ? ");
+//     scanf("%d", &n);
+//     for (i = 0; i < n; i++)
+//     {
+//         for (j = 0; j < n; j++)
+//         {
+//             if (num[j] > num[j + 1])
+//             {
+//                 temp = num[j];
+//                 num[j] = num[j + 1];
+//                 num[j + i] = temp;
+//             }
+//         }
+//     }
+//     for (i = 0; i < n; i++)
+//     {
+//         printf("%d", num[i]);
+//     }
+//     return 0;
+// }
+
+
+
+#include<stdio.h>
+int main(){
+    printf("Hello World ");
     }
-    for (i = 0; i < n; i++)
-    {
-        printf("%d", num[i]);
-    }
-    return 0;
-}
