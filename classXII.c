@@ -104,11 +104,9 @@
 //     getch();
 // }
 
-
-
- // A c program to assign values to the member of structure and to display them on the screen
+// A c program to assign values to the member of structure and to display them on the screen
 // #include <stdio.h>
- // #include <conio.h>
+// #include <conio.h>
 // #include <string.h>
 // struct student
 // {
@@ -129,10 +127,31 @@
 //     return 0;
 // }
 
-
 // #include<stdio.h>
 // #include<conio.h>
 // // clscr();
 // void main(){
 //     printf("Arjun Rokkha");
 // }
+
+// Machine generated alternative text:
+#include <stdio.h>
+
+#include <string.h>
+struct student
+{
+    char name[10];
+    unsigned int roll_no;
+    float mark;
+};
+int main()
+{
+    struct student stu1;
+    strcpy(stu1.name, "Arjun");
+    stu1.roll_no = 1;
+    stu1.mark = 98;
+    printf("\n The name is the student is %s", stu1.name);
+    printf("\n The roll_no %u", stu1.roll_no);
+    printf("\n The mark obtained id %f", stu1.mark);
+    return 0;
+}
