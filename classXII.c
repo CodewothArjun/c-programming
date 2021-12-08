@@ -107,6 +107,62 @@ void main()
 }
 
 
+To calculate the maximum temperature and minimum temperature of this 7 days..
+#include<stdio.h>
+int calculateMax(int maxTemp[]);
+int calculateMin(int minTemp[]);
+float calculateAverage(int maxTemp[], int minTemp[]);
+void main() {
+  int maxTemp[7], minTemp[7];
+  int i, highestTemp, lowestTemp;
+  float average;
+  //taking input of 7 days maximum and minimum temperature
+  for (i = 0; i < 7; i++) {
+    printf("Enter max and min temp of day %d=", i + 1);
+    scanf("%d %d", & maxTemp[i], & minTemp[i]);
+  }
+  // calculating highest temperature using function
+  highestTemp = calculateMax(maxTemp);
+  // calculating lowest temperature using function
+  lowestTemp = calculateMin(minTemp);
+  // calculating average temperature using function
+  average = calculateAverage(maxTemp, minTemp);
 
+  printf("Highest Temperature=%d \n", highestTemp);
+  printf("Lowest Temperature=%d \n", lowestTemp);
+  printf("Average Temperature=%.2f \n", average);
+}
+int calculateMax(int temp[]) {
+  int h = temp[0];
+  int i; //for loop
+  for (i = 0; i < 7; i++) {
+    if (h < temp[i]) {
+      h = temp[i];
+    }
+  }
+  return h;
+}
+int calculateMin(int temp[]) {
+  int l = temp[0];
+  int i; //for loop
+  for (i = 0; i < 7; i++) {
+    if (l > temp[i]) {
+      l = temp[i];
+    }
+  }
+  return l;
+}
+float calculateAverage(int maxTemp[], int minTemp[]) {
+  int  i;
+  float average,eachDayAverage,eachDayAvgSum=0;
+  for (i = 0; i < 7; i++) {
+  	//max and min temp sum then 
+	//dividing by 2.0 to convert int to float
+    eachDayAverage= (maxTemp[i] + minTemp[i])/2.0;
+    //calculating 
+    eachDayAvgSum=eachDayAvgSum+eachDayAverage;
+  }
+  average = eachDayAvgSum / 7; //enclusive type casting to float
+  return average;
+}
 
-hle
