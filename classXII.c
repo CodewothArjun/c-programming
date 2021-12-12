@@ -135,23 +135,51 @@
 // }
 
 // Machine generated alternative text:
-#include <stdio.h>
+// #include <stdio.h>
 
-#include <string.h>
-struct student
-{
-    char name[10];
-    unsigned int roll_no;
-    float mark;
-};
-int main()
-{
-    struct student stu1;
-    strcpy(stu1.name, "Arjun");
-    stu1.roll_no = 1;
-    stu1.mark = 98;
-    printf("\n The name is the student is %s", stu1.name);
-    printf("\n The roll_no %u", stu1.roll_no);
-    printf("\n The mark obtained id %f", stu1.mark);
-    return 0;
-}
+// #include <string.h>
+// struct student
+// {
+//     char name[10];
+//     unsigned int roll_no;
+//     float mark;
+// };
+// int main()
+// {
+//     struct student stu1;
+//     strcpy(stu1.name, "Arjun");
+//     stu1.roll_no = 1;
+//     stu1.mark = 98;
+//     printf("\n The name is the student is %s", stu1.name);
+//     printf("\n The roll_no %u", stu1.roll_no);
+//     printf("\n The mark obtained id %f", stu1.mark);
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// #include <conio.h>
+// int reverse(int);
+// int main()
+// {
+//     int number, reverse_number = 0;
+//     printf("Enter a number to reverse value:"); // allow user to enter a number
+//     scanf("%d", &number);                       // takes value from user
+//     reverse_number = reverse(number);
+//     printf("Reverse of entered number is: %d", reverse_number); // print reverse value
+//     return 0;
+// }
+// reverse(int number)
+// {
+//     static reverse_number = 0;
+//     if (number == 0)
+//         return 0;
+//     reverse_number = reverse_number * 10;
+//     reverse_number = reverse_number + number % 10;
+//     reverse(number / 10);
+//     return reverse_number;
+// }
+
+
+// Function of c
+// reverse of a number
