@@ -127,7 +127,6 @@
 //     return 0;
 // }
 
-<<<<<<< HEAD
 // #include<stdio.h>
 // #include<conio.h>
 // // clscr();
