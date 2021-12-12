@@ -346,3 +346,75 @@ float calculateAverage(int maxTemp[], int minTemp[])
   average = eachDayAvgSum / 7; // enclusive type casting to float
   return average;
 }
+
+// struct in c
+// #include <stdio.h>
+// #include <conio.h>
+// void main()
+// {
+//     // Now we are going to write pointer array
+//     int c = 234, *p;
+//     p = &c;
+//     printf("p=%u\n", p);
+//     p++;
+//     printf("p=%u", p);
+//     getch();
+// }
+
+// #include <stdio.h>
+// #include <conio.h>
+// #include <string.h>
+// struct
+// {
+//     char f_name[50];
+//     char l_name[50];
+//     int roll_no;
+// } std[100];
+// void main()
+// {
+//     std[100];
+//     int i, t;
+//     printf("enter total number of student: ");
+//     scanf("%d", &t);
+//     for (i = 0; i < t; i++)
+//     {
+//         printf("\n enter %d student first name: ", i + 1);
+//         scanf("%s", &std[i].f_name);
+//         printf("\n enter %d student last name: ", i + 1);
+//         scanf("%s", &std[i].l_name);
+//         printf("\n enter %d student roll number: ", i + 1);
+//         scanf("%d", &std[i].roll_no);
+//     }
+//     printf("\n  Detail of students");
+//     printf("\n  First Name Last Name \t \t Roll Number \n");
+//     for (i = 0; i < t; i++)
+//     {
+//         printf("%s  %s \t \t  %d", std[i].f_name, std[i].l_name, std[i].roll_no);
+//         printf("\n ");
+//     }
+// }
+
+// #include <stdio.h>
+// int main()
+// {
+//     int a = 5, *p;
+//     p = &a;
+
+//     // a=p;
+//     // taking or storing
+//     // printf("The memory address of p is %d \n", &p);
+//     printf("The memory address of a is %u \n", p);
+//     printf("The content if the address held in p is %d \n", *p);
+//     *p = 59;
+//     printf("The new value of a is %d", a);
+//     return 0;
+// }
+
+#include <stdio.h>
+int main()
+{
+  int b, *t;
+  t = &b;
+  printf("The memory location of b is %x", t);
+  printf("\n The memory location of b is %u", t);
+}
