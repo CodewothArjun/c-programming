@@ -181,28 +181,68 @@
 
 // Function of c
 // reverse of a number
-#include <stdio.h>
-#include <conio.h>
-int reverse(int);
-void main()
-{
-    int rem, n;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    int s = reverse(n);
+// #include <stdio.h>
+// #include <conio.h>
+// int reverse(int);
+// void main()
+// {
+//     int rem, n;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     int s = reverse(n);
 
-    printf("Reverse of %d is %d", n, s);
-    getch();
-}
+//     printf("Reverse of %d is %d", n, s);
+//     getch();
+// }
 
-int reverse(int n)
-{
-    int rem, rev = 0;
-    while (n != 0)
-    {
-        rem = n % 10;
-        rev = rev * 10 + rem;
-        n /= 10;
-    }
-    return rev;
-}
+// int reverse(int n)
+// {
+//     int rem, rev = 0;
+//     while (n != 0)
+//     {
+//         rem = n % 10;
+//         rev = rev * 10 + rem;
+//         n /= 10;
+//     }
+//     return rev;
+// }
+
+// // write a c program to find the factorial of a positive number.
+
+// #include <stdio.h>
+// int main()
+// {
+//     int i, factorial = 1, n;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     for (i = n; i > 0; i--)
+//     {
+//         factorial = factorial * i;
+//     }
+//     printf("The factorial of %d = %d", n, factorial);
+//     return 0;
+// }
+
+// // through function
+// #include <stdio.h>
+// int factorial(int);
+// int main()
+// {
+//     int n, fact;
+//     printf("Enter a number= ");
+//     scanf("%d", &n);
+//     fact = factorial(n);
+//     printf("The factorial of %d is %d", n, fact);
+//     return 0;
+// }
+// int factorial(int n)
+// {
+//     if (n == 0 || n == 1)
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return (n * factorial(n - 1));
+//     }
+// }
