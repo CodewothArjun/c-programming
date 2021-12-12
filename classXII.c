@@ -156,7 +156,6 @@
 //     return 0;
 // }
 
-
 // #include <stdio.h>
 // #include <conio.h>
 // int reverse(int);
@@ -180,6 +179,30 @@
 //     return reverse_number;
 // }
 
-
 // Function of c
 // reverse of a number
+#include <stdio.h>
+#include <conio.h>
+int reverse(int);
+void main()
+{
+    int rem, n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    int s = reverse(n);
+
+    printf("Reverse of %d is %d", n, s);
+    getch();
+}
+
+int reverse(int n)
+{
+    int rem, rev = 0;
+    while (n != 0)
+    {
+        rem = n % 10;
+        rev = rev * 10 + rem;
+        n /= 10;
+    }
+    return rev;
+}
