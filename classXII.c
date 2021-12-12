@@ -279,10 +279,9 @@ void main()
   getch();
 }
 
-To calculate the maximum temperature and minimum temperature of this 7 days..
+// To calculate the maximum temperature and minimum temperature of this 7 days..
 #include <stdio.h>
-    int
-    calculateMax(int maxTemp[]);
+int calculateMax(int maxTemp[]);
 int calculateMin(int minTemp[]);
 float calculateAverage(int maxTemp[], int minTemp[]);
 void main()
