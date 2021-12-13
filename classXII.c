@@ -553,3 +553,23 @@
 //   getch();
 // }
 
+// unions in c
+#include <stdio.h>
+union sample
+{
+  int a;
+  char b[2];
+
+} s;
+
+int main()
+{
+  s.a = 10;
+  printf("\n a=%d", s.a);
+  printf("\n b[0]=%d", s.b[0]);
+  printf("\n b[1]=%d", s.b[1]);
+  s.b[0] = 'a';
+  s.b[1] = 'b';
+  printf("\n a=%d and b[0]=%c", s.a, s.b[0], s.b[1]);
+  return 0;
+}
