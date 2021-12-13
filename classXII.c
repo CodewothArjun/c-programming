@@ -410,79 +410,111 @@ float calculateAverage(int maxTemp[], int minTemp[])
 //     return 0;
 // }
 
-#include <stdio.h>
-int main()
-{
-  int b, *t;
-  t = &b;
-  printf("The memory location of b is %x", t);
-  printf("\n The memory location of b is %u", t);
-}
+// #include <stdio.h>
+// int main()
+// {
+//   int b, *t;
+//   t = &b;
+//   printf("The memory location of b is %x", t);
+//   printf("\n The memory location of b is %u", t);
+// }
 
-// factorial
-// write a c program to find the factorial of a positive number.
+// // factorial
+// // write a c program to find the factorial of a positive number.
 
-#include <stdio.h>
-int main()
-{
-  int i, factorial = 1, n;
-  printf("Enter a number: ");
-  scanf("%d", &n);
-  for (i = n; i > 0; i--)
-  {
-    factorial = factorial * i;
-  }
-  printf("The factorial of %d = %d", n, factorial);
-  return 0;
-}
+// #include <stdio.h>
+// int main()
+// {
+//   int i, factorial = 1, n;
+//   printf("Enter a number: ");
+//   scanf("%d", &n);
+//   for (i = n; i > 0; i--)
+//   {
+//     factorial = factorial * i;
+//   }
+//   printf("The factorial of %d = %d", n, factorial);
+//   return 0;
+// }
 
-// through function
-#include <stdio.h>
-int factorial(int);
-int main()
-{
-  int n, fact;
-  printf("Enter a number= ");
-  scanf("%d", &n);
-  fact = factorial(n);
-  printf("The factorial of %d is %d", n, fact);
-  return 0;
-}
-int factorial(int n)
-{
-  if (n == 0 || n == 1)
-  {
-    return 1;
-  }
-  else
-  {
-    return (n * factorial(n - 1));
-  }
-}
+// // through function
+// #include <stdio.h>
+// int factorial(int);
+// int main()
+// {
+//   int n, fact;
+//   printf("Enter a number= ");
+//   scanf("%d", &n);
+//   fact = factorial(n);
+//   printf("The factorial of %d is %d", n, fact);
+//   return 0;
+// }
+// int factorial(int n)
+// {
+//   if (n == 0 || n == 1)
+//   {
+//     return 1;
+//   }
+//   else
+//   {
+//     return (n * factorial(n - 1));
+//   }
+// }
 
-// reverse of a positive number.
+// // reverse of a positive number.
+// #include <stdio.h>
+// #include <conio.h>
+// int Reverse(int n);
+
+// int Reverse(int n)
+// {
+//   int sum = 0;
+//   while (n != 0)
+//   {
+//     sum = (sum * 10) + (n % 10);
+//     n /= 10;
+//   }
+//   return sum;
+// }
+
+// int main()
+// {
+//   int rev, num;
+//   clrscr();
+//   printf("Enter a Positive Number: ");
+//   scanf("%d", &num);
+//   rev = Reverse(num);
+//   printf("The Reverse of given number %d is: %d", num, rev);
+//   return 0;
+// }
+
 #include <stdio.h>
 #include <conio.h>
-int Reverse(int n);
-
-int Reverse(int n)
+#include <string.h>
+struct employee
 {
-  int sum = 0;
-  while (n != 0)
+  char name[50];
+  int id;
+  float salary;
+};
+void main()
+{
+  struct employee emp[100];
+  float highest = 0;
+  int i, index;
+  for (i = 0; i < 3; i++)
   {
-    sum = (sum * 10) + (n % 10);
-    n /= 10;
+    printf("Enter emp id,emp name and salary %d :", i + 1);
+    scanf("%d %s %f", &emp[i].id, &emp[i].name, &emp[i].salary);
   }
-  return sum;
-}
-
-int main()
-{
-  int rev, num;
-  clrscr();
-  printf("Enter a Positive Number: ");
-  scanf("%d", &num);
-  rev = Reverse(num);
-  printf("The Reverse of given number %d is: %d", num, rev);
-  return 0;
+  for (i = 0; i < 3; i++)
+  {
+    if (highest < emp[i].salary)
+    {
+      index = i;
+      highest = emp[i].salary;
+    }
+  }
+  printf("\n Id \t name \t salary");
+  printf("\n %d \t %s \t %.2f", emp[index].id, emp[index].name, emp[index].salary);
+  getch();
 }
