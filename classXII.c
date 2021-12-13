@@ -488,34 +488,68 @@
 // }
 
 // Enter a emp name,emp id and salary and print the higest salary of a employee.
+// #include <stdio.h>
+// #include <conio.h>
+// #include <string.h>
+// struct employee
+// {
+//   char name[50];
+//   int id;
+//   float salary;
+// };
+// void main()
+// {
+//   struct employee emp[100];
+//   float highest = 0;
+//   int i, index;
+//   for (i = 0; i < 3; i++)
+//   {
+//     printf("Enter emp id,emp name and salary %d :", i + 1);
+//     scanf("%d %s %f", &emp[i].id, &emp[i].name, &emp[i].salary);
+//   }
+//   for (i = 0; i < 3; i++)
+//   {
+//     if (highest < emp[i].salary)
+//     {
+//       index = i;
+//       highest = emp[i].salary;
+//     }
+//   }
+//   printf("\n Id \t name \t salary");
+//   printf("\n %d \t %s \t %.2f", emp[index].id, emp[index].name, emp[index].salary);
+//   getch();
+// }
+
 #include <stdio.h>
 #include <conio.h>
 #include <string.h>
 struct employee
 {
-  char name[50];
-  int id;
-  float salary;
+  int emp_id;
+  char emp_name[1000];
+  float emp_salary;
 };
 void main()
 {
-  struct employee emp[100];
-  float highest = 0;
-  int i, index;
+  struct employee emp[3];
+  struct employee highest;
+  int i;
   for (i = 0; i < 3; i++)
   {
     printf("Enter emp id,emp name and salary %d :", i + 1);
-    scanf("%d %s %f", &emp[i].id, &emp[i].name, &emp[i].salary);
+    scanf("%d %s %f", &emp[i].emp_id, &emp[i].emp_name, &emp[i].emp_salary);
   }
+  highest.emp_salary = 0;
   for (i = 0; i < 3; i++)
   {
-    if (highest < emp[i].salary)
+    if (highest.emp_salary < emp[i].emp_salary)
     {
-      index = i;
-      highest = emp[i].salary;
+      strcpy(highest.emp_name, emp[i].emp_name);
+      highest.emp_id = emp[i].emp_id;
+      highest.emp_salary = emp[i].emp_salary;
     }
   }
-  printf("\n Id \t name \t salary");
-  printf("\n %d \t %s \t %.2f", emp[index].id, emp[index].name, emp[index].salary);
+  printf("%d %s %f", highest.emp_id, highest.emp_name, highest.emp_salary);
   getch();
 }
+
