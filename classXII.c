@@ -573,3 +573,38 @@ int main()
   printf("\n a=%d and b[0]=%c", s.a, s.b[0], s.b[1]);
   return 0;
 }
+
+
+
+
+
+// write a program to calculate the prime number and display it.
+#include<stdio.h>
+#include<conio.h>
+int prime(int);
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    prime(n);
+    return 0;
+}
+
+int prime(int n) {
+    int i, j;
+    int count=0;
+    printf("\nprime numbers = ");
+    for(i=1; i<=n; i++){
+      count=0;   
+      for(j=2; j<i; j++) {
+        if(i%j==0) {
+           count++;
+        }
+    }
+     if(count==0) {
+           printf("%d ,", i);
+    }
+    }
+    
+    return count;
+}
